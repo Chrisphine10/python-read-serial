@@ -33,7 +33,7 @@ ser.timeout = 5
 ser.open()
 print(port + ' is now open')
 print("loading...")
-res = ser.readline()
+res = ser.read()
 #print(res.decode('Ascii'))
 print(res)
 print("Closing connection...")
