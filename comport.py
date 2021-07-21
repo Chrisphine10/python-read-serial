@@ -34,7 +34,10 @@ ser.open()
 print(port + ' is now open')
 print("loading...")
 res = ser.read()
-#print(res.decode('Ascii'))
+for line in res:
+    print(str(count) + str(': ') + chr(line) )
+    count = count+1
+print(res.decode('Ascii'))
 print(res)
 print("Closing connection...")
 ser.close()
